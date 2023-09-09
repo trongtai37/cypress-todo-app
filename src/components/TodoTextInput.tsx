@@ -52,6 +52,7 @@ const TodoTextInput: React.FC<TodoTextInputProps> = ({
       onBlur={handleBlur}
       onChange={handleChange}
       onKeyDown={handleSubmit}
+      data-test={newTodo ? 'new-todo-input' : 'edit-todo-input'}
     />
   );
 };

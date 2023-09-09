@@ -35,7 +35,11 @@ const Footer: React.FC<FooterProps> = (props) => {
         ))}
       </ul>
       {!!completedCount && (
-        <button className="clear-completed" onClick={onClearCompleted}>
+        <button
+          className="clear-completed"
+          onClick={onClearCompleted}
+          data-test="clear-completed"
+        >
           Clear completed
         </button>
       )}

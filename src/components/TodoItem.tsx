@@ -57,6 +57,7 @@ const TodoItem: React.FC<TodoItemProps> = (props) => {
         completed: todo.completed,
         editing: editing,
       })}
+      data-test="todo-item"
     >
       {element}
     </li>
