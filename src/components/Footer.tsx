@@ -21,11 +21,11 @@ const Footer: React.FC<FooterProps> = (props) => {
   const { activeCount, completedCount, onClearCompleted } = props;
   const itemWord = activeCount === 1 ? 'item' : 'items';
   return (
-    <footer className="footer">
-      <span className="todo-count">
+    <footer className="footer" data-test="footer">
+      <span className="todo-count" data-test="todo-count">
         <strong>{activeCount || 'No'}</strong> {itemWord} left
       </span>
-      <ul className="filters">
+      <ul className="filters" data-test="filters">
         {Object.keys(FILTER_TITLES).map((filter) => (
           <li key={filter}>
             <FilterLink filter={filter}>

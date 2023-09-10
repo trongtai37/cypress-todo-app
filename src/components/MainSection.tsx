@@ -22,8 +22,13 @@ const MainSection: React.FC<MainSectionProps> = ({
           checked={completedCount === todosCount}
           onClick={actions.completeAllTodos}
           onChange={actions.completeAllTodos}
+          data-test="toggle-all-checkbox"
         />
-        <label data-cy-toggle-all onClick={actions.completeAllTodos} />
+        <label
+          data-cy-toggle-all
+          onClick={actions.completeAllTodos}
+          data-test="toggle-all-label"
+        />
       </span>
     )}
     <VisibleTodoList />
