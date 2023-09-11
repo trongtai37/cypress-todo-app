@@ -117,6 +117,19 @@ describe('Basic CRUD Todo app', () => {
         .find('label')
         .should('have.text', 'todo 2 edited');
     });
+
+    it('should save the edits on blur', () => {
+      cy.getBySel('todo-list')
+        .children()
+        .eq(1)
+        .as('secondTodo')
+        .find('label')
+        .dblclick();
+
+      cy.get('@secondTodo').find('.edit').type(' edited').blur();
+
+      cy.get('@secondTodo').should('have.text', 'todo 2 edited');
+    });
   });
 
   context('Todo counter', () => {
