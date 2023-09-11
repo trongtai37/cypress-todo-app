@@ -11,7 +11,9 @@ export default defineConfig({
     shouldInstrumentCode &&
       istanbul({
         cypress: true,
-        checkProd: true,
+        requireEnv: false,
+        forceBuildInstrument: true,
+        nycrcPath: './.nycrc',
       }),
   ],
 });
