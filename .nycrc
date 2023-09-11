@@ -9,6 +9,5 @@
   ],
   "all": true,
   "check-coverage": true,
-  "reporter": ["text", "html"],
   "include": ["src/**/*"]
 }
