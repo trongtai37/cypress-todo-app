@@ -9,5 +9,6 @@ export default defineConfig({
     },
     baseUrl: 'http://localhost:5173',
     excludeSpecPattern: ['**/*.snap', '**/__snapshot__/*', '**/smoke.js'],
+    projectId: 'nwfprz',
   },
 });
