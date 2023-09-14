@@ -14,4 +14,18 @@ export default defineConfig({
     excludeSpecPattern: ['**/*.snap', '**/__snapshot__/*', '**/smoke.js'],
     projectId: 'nwfprz',
   },
+
+  component: {
+    devServer: {
+      framework: 'react',
+      bundler: 'vite',
+      viteConfig: {
+        viteConfig,
+        server: {
+          port: 5174,
+        },
+      },
+    },
+    specPattern: ['src/**/*.spec.cy.tsx'],
+  },
 });

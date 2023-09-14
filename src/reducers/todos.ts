@@ -11,20 +11,20 @@ import { TodoItem } from '../models';
 export type TodoAction =
   | {
       type: typeof ADD_TODO;
-      text: string;
+      text: TodoItem['text'];
     }
   | {
       type: typeof DELETE_TODO;
-      id: number;
+      id: TodoItem['id'];
     }
   | {
       type: typeof EDIT_TODO;
-      id: number;
-      text: string;
+      id: TodoItem['id'];
+      text: TodoItem['text'];
     }
   | {
       type: typeof COMPLETE_TODO;
-      id: number;
+      id: TodoItem['id'];
     }
   | {
       type: typeof COMPLETE_ALL_TODOS;
