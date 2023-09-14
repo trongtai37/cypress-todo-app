@@ -1,0 +1,13 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "exclude": [
+    "cypress/**/*",
+    "coverage/**/*",
+    "dist/**/",
+    "node_modules/**/*",
+    "src/vite-env.d.ts"
+  ],
+  "all": true,
+  "check-coverage": true,
+  "include": ["src/**/*"]
+}
